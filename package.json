@@ -2,7 +2,7 @@
   "_args": [
     [
       {
-        "name": "react-native-chart",
+        "name": "@housing/react-native-chart",
         "raw": "react-native-chart@1.0.8-beta",
         "rawSpec": "1.0.8-beta",
         "scope": null,
@@ -29,7 +29,7 @@
   "_npmVersion": "3.9.0",
   "_phantomChildren": {},
   "_requested": {
-    "name": "react-native-chart",
+    "name": "@housing/react-native-chart",
     "raw": "react-native-chart@1.0.8-beta",
     "rawSpec": "1.0.8-beta",
     "scope": null,
@@ -78,7 +78,7 @@
       "name": "tomauty"
     }
   ],
-  "name": "react-native-chart",
+  "name": "@housing/react-native-chart",
   "optionalDependencies": {},
   "readme": "ERROR: No README data found!",
   "scripts": {
