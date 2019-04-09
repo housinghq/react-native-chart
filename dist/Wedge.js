@@ -23,6 +23,8 @@ Object.defineProperty(exports,"__esModule",{value:true});var _extends=Object.ass
 
 
 
+var _propTypes=require('prop-types');var _propTypes2=_interopRequireDefault(_propTypes);
+
 var _react=require('react');var _react2=_interopRequireDefault(_react);
 var _reactNative=require('react-native');function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var
 Shape=_reactNative.ART.Shape,Path=_reactNative.ART.Path;var
@@ -181,4 +183,4 @@ path=this._createArcPath(originX,originY,startAngle,endAngle,or,ir);
 }
 
 return _react2.default.createElement(Shape,_extends({},this.props,{d:path}));
-}}]);return Wedge;}(_react.Component);Wedge.propTypes={outerRadius:_react.PropTypes.number.isRequired,startAngle:_react.PropTypes.number.isRequired,endAngle:_react.PropTypes.number.isRequired,originX:_react.PropTypes.number.isRequired,originY:_react.PropTypes.number.isRequired,innerRadius:_react.PropTypes.number};exports.default=Wedge;
+}}]);return Wedge;}(_react.Component);Wedge.propTypes={outerRadius:_propTypes2.default.number.isRequired,startAngle:_propTypes2.default.number.isRequired,endAngle:_propTypes2.default.number.isRequired,originX:_propTypes2.default.number.isRequired,originY:_propTypes2.default.number.isRequired,innerRadius:_propTypes2.default.number};exports.default=Wedge;
