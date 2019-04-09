@@ -1,22 +1,17 @@
 {
   "_args": [
     [
-      {
-        "name": "@housing/react-native-chart",
-        "raw": "react-native-chart@1.0.8-beta",
-        "rawSpec": "1.0.8-beta",
-        "scope": null,
-        "spec": "1.0.8-beta",
-        "type": "version"
-      },
-      "/Users/aw2taman/Desktop/CompassApp"
+      "@housing/react-native-chart@1.0.9-beta",
+      "/Users/jitendralakhmani/Documents/Work/housing-app"
     ]
   ],
-  "_from": "react-native-chart@1.0.8-beta",
-  "_id": "react-native-chart@1.0.8-beta",
+  "_from": "@housing/react-native-chart@1.0.9-beta",
+  "_id": "@housing/react-native-chart@1.0.9-beta",
+  "_inBundle": false,
   "_inCache": true,
   "_installable": true,
-  "_location": "/react-native-chart",
+  "_integrity": "sha1-XalDzHaoB7Up9j1De7Odl8P83CM=",
+  "_location": "/@housing/react-native-chart",
   "_nodeVersion": "6.1.0",
   "_npmOperationalInternal": {
     "host": "packages-12-west.internal.npmjs.com",
@@ -29,21 +24,24 @@
   "_npmVersion": "3.9.0",
   "_phantomChildren": {},
   "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@housing/react-native-chart@1.0.9-beta",
     "name": "@housing/react-native-chart",
-    "raw": "react-native-chart@1.0.8-beta",
-    "rawSpec": "1.0.8-beta",
-    "scope": null,
-    "spec": "1.0.8-beta",
-    "type": "version"
+    "escapedName": "@housing%2freact-native-chart",
+    "scope": "@housing",
+    "rawSpec": "1.0.9-beta",
+    "saveSpec": null,
+    "fetchSpec": "1.0.9-beta"
   },
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/react-native-chart/-/react-native-chart-1.0.8-beta.tgz",
+  "_resolved": "https://registry.npmjs.org/@housing/react-native-chart/-/react-native-chart-1.0.9-beta.tgz",
   "_shasum": "c34b50ffe7f2acd6f519d614a134a7cd29135766",
   "_shrinkwrap": null,
-  "_spec": "react-native-chart@1.0.8-beta",
-  "_where": "/Users/aw2taman/Desktop/CompassApp",
+  "_spec": "1.0.9-beta",
+  "_where": "/Users/jitendralakhmani/Documents/Work/housing-app",
   "dependencies": {
     "babel-cli": "^6.10.1",
     "babel-eslint": "^6.0.0",
@@ -70,21 +68,20 @@
   "main": "./src/Chart.js",
   "maintainers": [
     {
-      "email": "hyunjincho@gmail.com",
-      "name": "hyuncho"
+      "name": "hyuncho",
+      "email": "hyunjincho@gmail.com"
     },
     {
-      "email": "tom.auty@gmail.com",
-      "name": "tomauty"
+      "name": "tomauty",
+      "email": "tom.auty@gmail.com"
     }
   ],
   "name": "@housing/react-native-chart",
   "optionalDependencies": {},
-  "readme": "ERROR: No README data found!",
   "scripts": {
     "build": "babel src --out-dir dist",
     "lint": "eslint src",
     "prepublish": "npm run build"
   },
-  "version": "1.0.8-beta"
+  "version": "1.0.10-beta"
 }
