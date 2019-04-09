@@ -60,7 +60,7 @@ export default class Chart extends Component<void, any, any> {
 
 	constructor(props : any) {
 		super(props);
-		this.state = { bounds: { min: 0, max: 0 } };
+		this.state = { bounds: { min: 0, max: 0 }, containerHeight: 0 };
 	}
 	componentDidMount() {
 		this._computeBounds();
