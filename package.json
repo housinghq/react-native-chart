@@ -1,16 +1,16 @@
 {
   "_args": [
     [
-      "@housing/react-native-chart@1.0.9-beta",
+      "@housing/react-native-chart@1.0.10-beta",
       "/Users/jitendralakhmani/Documents/Work/housing-app"
     ]
   ],
-  "_from": "@housing/react-native-chart@1.0.9-beta",
-  "_id": "@housing/react-native-chart@1.0.9-beta",
+  "_from": "@housing/react-native-chart@1.0.10-beta",
+  "_id": "@housing/react-native-chart@1.0.10-beta",
   "_inBundle": false,
   "_inCache": true,
   "_installable": true,
-  "_integrity": "sha1-XalDzHaoB7Up9j1De7Odl8P83CM=",
+  "_integrity": "sha512-IeW974w4Fl0OZQCuvS6uVjJ5uFRF03NIocdrAk4miyUEMQsgrASSGZz24pHkdK2Lpn+YAb/lAUp9tE4hG2rMVQ==",
   "_location": "/@housing/react-native-chart",
   "_nodeVersion": "6.1.0",
   "_npmOperationalInternal": {
@@ -22,31 +22,38 @@
     "name": "tomauty"
   },
   "_npmVersion": "3.9.0",
-  "_phantomChildren": {},
+  "_phantomChildren": {
+    "babel-traverse": "6.26.0",
+    "babel-types": "6.26.0",
+    "babylon": "6.18.0",
+    "lodash.assign": "4.2.0",
+    "lodash.pickby": "4.6.0"
+  },
   "_requested": {
     "type": "version",
     "registry": true,
-    "raw": "@housing/react-native-chart@1.0.9-beta",
+    "raw": "@housing/react-native-chart@1.0.10-beta",
     "name": "@housing/react-native-chart",
     "escapedName": "@housing%2freact-native-chart",
     "scope": "@housing",
-    "rawSpec": "1.0.9-beta",
+    "rawSpec": "1.0.10-beta",
     "saveSpec": null,
-    "fetchSpec": "1.0.9-beta"
+    "fetchSpec": "1.0.10-beta"
   },
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/@housing/react-native-chart/-/react-native-chart-1.0.9-beta.tgz",
+  "_resolved": "https://registry.npmjs.org/@housing/react-native-chart/-/react-native-chart-1.0.10-beta.tgz",
   "_shasum": "c34b50ffe7f2acd6f519d614a134a7cd29135766",
   "_shrinkwrap": null,
-  "_spec": "1.0.9-beta",
+  "_spec": "1.0.10-beta",
   "_where": "/Users/jitendralakhmani/Documents/Work/housing-app",
   "dependencies": {
     "babel-cli": "^6.10.1",
     "babel-eslint": "^6.0.0",
     "babel-plugin-transform-flow-strip-types": "^6.8.0",
-    "babel-preset-react-native": "^1.5.3"
+    "babel-preset-react-native": "^1.5.3",
+    "@react-native-community/art": "^1.2.0"
   },
   "description": "[![Join the chat at https://gitter.im/tomauty/react-native-chart](https://badges.gitter.im/tomauty/react-native-chart.svg)](https://gitter.im/tomauty/react-native-chart) [![npm version](https://badge.fury.io/js/react-native-chart.svg)](https://badge.fury.",
   "devDependencies": {
@@ -83,5 +90,5 @@
     "lint": "eslint src",
     "prepublish": "npm run build"
   },
-  "version": "1.0.10-beta"
+  "version": "1.0.11-beta"
 }

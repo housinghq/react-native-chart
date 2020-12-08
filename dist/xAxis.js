@@ -1,5 +1,5 @@
 
-'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();
+'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _jsxFileName='src/xAxis.js';var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();
 var _propTypes=require('prop-types');var _propTypes2=_interopRequireDefault(_propTypes);
 
 var _react=require('react');var _react2=_interopRequireDefault(_react);
@@ -52,7 +52,7 @@ styles.xAxisContainer,
 borderTopColor:this.props.axisColor,
 borderTopWidth:this.props.axisLineWidth},
 
-this.props.style]},
+this.props.style],__source:{fileName:_jsxFileName,lineNumber:48}},
 
 
 function(){
@@ -71,7 +71,7 @@ styles.axisText,
 {
 textAlign:_this2.props.align,
 color:_this2.props.axisLabelColor,
-fontSize:_this2.props.labelFontSize}]},
+fontSize:_this2.props.labelFontSize}],__source:{fileName:_jsxFileName,lineNumber:67}},
 
 
 item));

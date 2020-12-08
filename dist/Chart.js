@@ -1,5 +1,5 @@
 
-'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _extends=Object.assign||function(target){for(var i=1;i<arguments.length;i++){var source=arguments[i];for(var key in source){if(Object.prototype.hasOwnProperty.call(source,key)){target[key]=source[key];}}}return target;};var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();
+'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _extends=Object.assign||function(target){for(var i=1;i<arguments.length;i++){var source=arguments[i];for(var key in source){if(Object.prototype.hasOwnProperty.call(source,key)){target[key]=source[key];}}}return target;};var _jsxFileName='src/Chart.js';var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();
 var _propTypes=require('prop-types');var _propTypes2=_interopRequireDefault(_propTypes);
 
 var _react=require('react');var _react2=_interopRequireDefault(_react);
@@ -150,7 +150,7 @@ props));_this.
 
 _onContainerLayout=function(e){return _this.setState({
 containerHeight:e.nativeEvent.layout.height,
-containerWidth:e.nativeEvent.layout.width});};_this.state={bounds:{min:0,max:0}};return _this;}_createClass(Chart,[{key:'componentDidMount',value:function componentDidMount(){this._computeBounds();}},{key:'shouldComponentUpdate',value:function shouldComponentUpdate(props,state){return props!==this.props||state!==this.state;}},{key:'componentDidUpdate',value:function componentDidUpdate(props){if(this.props!==props){this._computeBounds();}}},{key:'_computeBounds',value:function _computeBounds(){var min=Infinity;var max=-Infinity;var data=this.props.data||[[]];data.forEach(function(Graph){Graph.forEach(function(XYPair){var number=XYPair[1];if(number===''){return;}if(number<min)min=number;if(number>max)max=number;});});var ceilMax=Math.ceil(max);var floorMin=Math.floor(min);if(ceilMax-floorMin>this.props.verticalGridStep){min=floorMin;max=ceilMax;}if(this.props.tightBounds){return this.setState({bounds:{min:min,max:max}});}max=getRoundNumber(max,this.props.verticalGridStep);if(min<0){var step=void 0;if(this.props.verticalGridStep>3){step=Math.abs(max-min)/(this.props.verticalGridStep-1);}else{step=Math.max(Math.abs(max-min)/2,Math.max(Math.abs(min),Math.abs(max)));}step=getRoundNumber(step,this.props.verticalGridStep);var newMin=void 0;var newMax=void 0;if(Math.abs(min)>Math.abs(max)){var m=Math.ceil(Math.abs(min)/step);newMin=step*m*(min>0?1:-1);newMax=step*(this.props.verticalGridStep-m)*(max>0?1:-1);}else{var _m=Math.ceil(Math.abs(max)/step);newMax=step*_m*(max>0?1:-1);newMin=step*(this.props.verticalGridStep-_m)*(min>0?1:-1);}if(min<newMin){newMin-=step;newMax-=step;}if(max>newMax+step){newMin+=step;newMax+=step;}if(max<min){var tmp=max;max=min;min=tmp;}}return this.setState({bounds:{max:max,min:min}});}},{key:'_minVerticalBound',value:function _minVerticalBound()
+containerWidth:e.nativeEvent.layout.width});};_this.state={bounds:{min:0,max:0},containerHeight:0};return _this;}_createClass(Chart,[{key:'componentDidMount',value:function componentDidMount(){this._computeBounds();}},{key:'shouldComponentUpdate',value:function shouldComponentUpdate(props,state){return props!==this.props||state!==this.state;}},{key:'componentDidUpdate',value:function componentDidUpdate(props){if(this.props!==props){this._computeBounds();}}},{key:'_computeBounds',value:function _computeBounds(){var min=Infinity;var max=-Infinity;var data=this.props.data||[[]];data.forEach(function(Graph){Graph.forEach(function(XYPair){var number=XYPair[1];if(number===''){return;}if(number<min)min=number;if(number>max)max=number;});});var ceilMax=Math.ceil(max);var floorMin=Math.floor(min);if(ceilMax-floorMin>this.props.verticalGridStep){min=floorMin;max=ceilMax;}if(this.props.tightBounds){return this.setState({bounds:{min:min,max:max}});}max=getRoundNumber(max,this.props.verticalGridStep);if(min<0){var step=void 0;if(this.props.verticalGridStep>3){step=Math.abs(max-min)/(this.props.verticalGridStep-1);}else{step=Math.max(Math.abs(max-min)/2,Math.max(Math.abs(min),Math.abs(max)));}step=getRoundNumber(step,this.props.verticalGridStep);var newMin=void 0;var newMax=void 0;if(Math.abs(min)>Math.abs(max)){var m=Math.ceil(Math.abs(min)/step);newMin=step*m*(min>0?1:-1);newMax=step*(this.props.verticalGridStep-m)*(max>0?1:-1);}else{var _m=Math.ceil(Math.abs(max)/step);newMax=step*_m*(max>0?1:-1);newMin=step*(this.props.verticalGridStep-_m)*(min>0?1:-1);}if(min<newMin){newMin-=step;newMax-=step;}if(max>newMax+step){newMin+=step;newMax+=step;}if(max<min){var tmp=max;max=min;min=tmp;}}return this.setState({bounds:{max:max,min:min}});}},{key:'_minVerticalBound',value:function _minVerticalBound()
 
 
 {
@@ -167,7 +167,7 @@ return this.state.bounds.max>0?this.state.bounds.max:0;
 var components={'line':_LineChart2.default,'bar':_BarChart2.default,'pie':_PieChart2.default};
 var axisAlign=this.props.type==='line'?'left':'center';
 return(
-_react2.default.createElement(_reactNative.View,null,
+_react2.default.createElement(_reactNative.View,{__source:{fileName:_jsxFileName,lineNumber:170}},
 function(){
 var ChartType=components[_this2.props.type]||_BarChart2.default;
 if(_this2.props.showAxis&&Chart!==_PieChart2.default){
@@ -175,10 +175,10 @@ return(
 _react2.default.createElement(_reactNative.View,{
 ref:'container',
 style:[_this2.props.style||{},{flexDirection:'column',flexGrow:1}],
-onLayout:_this2._onContainerLayout},
+onLayout:_this2._onContainerLayout,__source:{fileName:_jsxFileName,lineNumber:175}},
 
-_react2.default.createElement(_reactNative.View,{style:[styles.default,{flexDirection:'row'}]},
-_react2.default.createElement(_reactNative.View,{ref:'yAxis'},
+_react2.default.createElement(_reactNative.View,{style:[styles.default,{flexDirection:'row'}],__source:{fileName:_jsxFileName,lineNumber:180}},
+_react2.default.createElement(_reactNative.View,{ref:'yAxis',__source:{fileName:_jsxFileName,lineNumber:181}},
 _react2.default.createElement(_yAxis2.default,_extends({},
 _this2.props,{
 data:_this2.props.data,
@@ -189,7 +189,7 @@ containerWidth:_this2.state.containerWidth,
 maxVerticalBound:_this2.state.bounds.max,
 yAxisUseDecimal:_this2.props.yAxisUseDecimal,
 yAxisShortLabel:_this2.props.yAxisShortLabel,
-style:{width:_this2.props.yAxisWidth}}))),
+style:{width:_this2.props.yAxisWidth},__source:{fileName:_jsxFileName,lineNumber:182}}))),
 
 
 _react2.default.createElement(ChartType,_extends({},
@@ -198,19 +198,19 @@ data:_this2.props.data,
 width:_this2.state.containerWidth-_this2.props.yAxisWidth,
 height:_this2.state.containerHeight-_this2.props.xAxisHeight,
 minVerticalBound:_this2.state.bounds.min,
-maxVerticalBound:_this2.state.bounds.max}))),
+maxVerticalBound:_this2.state.bounds.max,__source:{fileName:_jsxFileName,lineNumber:195}}))),
 
 
 function(){
 return(
-_react2.default.createElement(_reactNative.View,{ref:'xAxis'},
+_react2.default.createElement(_reactNative.View,{ref:'xAxis',__source:{fileName:_jsxFileName,lineNumber:206}},
 _react2.default.createElement(_xAxis2.default,_extends({},
 _this2.props,{
 width:_this2.state.containerWidth-_this2.props.yAxisWidth,
 data:_this2.props.data,
 height:_this2.props.xAxisHeight,
 align:axisAlign,
-style:{marginLeft:_this2.props.yAxisWidth-1}}))));
+style:{marginLeft:_this2.props.yAxisWidth-1},__source:{fileName:_jsxFileName,lineNumber:207}}))));
 
 
 
@@ -222,7 +222,7 @@ return(
 _react2.default.createElement(_reactNative.View,{
 ref:'container',
 onLayout:_this2._onContainerLayout,
-style:[_this2.props.style||{},styles.default]},
+style:[_this2.props.style||{},styles.default],__source:{fileName:_jsxFileName,lineNumber:222}},
 
 _react2.default.createElement(ChartType,_extends({},
 _this2.props,{
@@ -230,7 +230,7 @@ data:_this2.props.data,
 width:_this2.state.containerWidth,
 height:_this2.state.containerHeight,
 minVerticalBound:_this2.state.bounds.min,
-maxVerticalBound:_this2.state.bounds.max}))));
+maxVerticalBound:_this2.state.bounds.max,__source:{fileName:_jsxFileName,lineNumber:227}}))));
 
 
 

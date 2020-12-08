@@ -1,4 +1,4 @@
-Object.defineProperty(exports,"__esModule",{value:true});var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();
+Object.defineProperty(exports,"__esModule",{value:true});var _jsxFileName='src/yAxis.js';var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();
 var _propTypes=require('prop-types');var _propTypes2=_interopRequireDefault(_propTypes);
 
 var _react=require('react');var _react2=_interopRequireDefault(_react);
@@ -86,7 +86,7 @@ style:{
 color:_this.props.axisLabelColor,
 fontSize:_this.props.labelFontSize},
 
-key:index},
+key:index,__source:{fileName:_jsxFileName,lineNumber:84}},
 
 label));
 
@@ -104,7 +104,7 @@ style:[
 styles.yAxisContainer,
 this.props.style||{},
 this.props.placement==='left'&&{borderRightColor:this.props.axisColor,borderRightWidth:this.props.axisLineWidth},
-this.props.placement==='right'&&{borderLeftColor:this.props.axisColor,borderLeftWidth:this.props.axisLineWidth}]},
+this.props.placement==='right'&&{borderLeftColor:this.props.axisColor,borderLeftWidth:this.props.axisLineWidth}],__source:{fileName:_jsxFileName,lineNumber:102}},
 
 
 range.map(this._createLabelForYAxis)));

@@ -1,7 +1,7 @@
 /* @flow */
 import React, { Component } from 'react';
-import { Animated, ART, View, Platform, TouchableOpacity } from 'react-native';
-const { Surface, Shape, Path } = ART;
+import { Animated, View, Platform, TouchableOpacity } from 'react-native';
+import { Surface, Shape, Path } from '@react-native-community/art'
 import * as C from './constants';
 import Circle from './Circle';
 const AnimatedShape = Animated.createAnimatedComponent(Shape);
