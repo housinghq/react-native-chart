@@ -3,7 +3,7 @@
 import PropTypes from 'prop-types';
 
 import React, { Component } from 'react';
-import { LayoutAnimation, StyleSheet, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import BarChart from './BarChart';
 import LineChart from './LineChart';
 import PieChart from './PieChart';
@@ -58,6 +58,7 @@ export default class Chart extends Component<void, any, any> {
 		yAxisWidth: 30,
 		yAxisUseDecimal: false,
 		yAxisShortLabel: false,
+		setMinVerticalBoundToZero: false
 	};
 
 	constructor(props : any) {
@@ -197,7 +198,7 @@ export default class Chart extends Component<void, any, any> {
 										data={this.props.data}
 										width={this.state.containerWidth - this.props.yAxisWidth}
 										height={this.state.containerHeight - this.props.xAxisHeight}
-										minVerticalBound={this.state.bounds.min}
+										minVerticalBound={this.props.setMinVerticalBoundToZero ? 0 : this.state.bounds.min}
 										maxVerticalBound={this.state.bounds.max}
 									/>
 								</View>
@@ -298,4 +299,5 @@ Chart.propTypes = {
 	// yAxisTitle: PropTypes.string,
 	yAxisTransform: PropTypes.func,
 	yAxisWidth: PropTypes.number,
+	setMinVerticalBoundToZero: PropTypes.bool,
 };
